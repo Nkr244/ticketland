@@ -131,12 +131,20 @@ input[type='file'] {
     justify-content: center;
     gap: 12px;
     margin-bottom: 24px;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+    }
 }
 
 .ticketland__search .search-container {
     position: relative;
     max-width: 502px;
     width: 100%;
+
+    @media screen and (max-width: 768px){
+        max-width: 100%;
+    }
 }
 
 .ticketland__search .search-input {
@@ -231,6 +239,10 @@ input[type='file'] {
     line-height: 24px;
     text-align: center;
     color: #FFFFFF;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+    }
 }
 
 .ticketland__search button:hover {
