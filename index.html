@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <title>Ticketland</title>
+</head>
+<body>
+<div class="wrapper ticketland">
+    <div class="container">
+        <h2 class="ticketland__title">Найди себя среди победителей</h2>
+        <h2 class="ticketland__title-mobile">Поиск победителей
+            по E-mail</h2>
+
+        <div class="ticketland__search">
+            <div class="search-container">
+                <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L17 17M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z"
+                          stroke="#626C77" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="text" class="search-input" id="searchInput" placeholder=" ">
+                <label class="search-label" for="searchInput">Введите Email для поиска</label>
+                <svg class="clear-icon"
+                     onclick="document.getElementById('searchInput').value = ''; this.style.display = 'none'; document.querySelector('.search-icon').style.display = 'block';"
+                     width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 5L10 10M10 10L15 15M10 10L15 5M10 10L5 15" stroke="#626C77" stroke-width="2"
+                          stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <button type="button" onclick="searchWinner()">Найти</button>
+        </div>
+
+        <div class="ticketland__result" id="resultCard">
+            <div class="ticketland__result-card">
+                <svg class="ticketland__result-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_24_2500)">
+                        <rect width="80" height="80" rx="40" fill="white"/>
+                        <path d="M68.6663 74.4857C68.6663 67.809 64.1222 61.989 57.6448 60.3696C46.0597 57.4733 33.9397 57.4733 22.3545 60.3696C15.8771 61.989 11.333 67.809 11.333 74.4857V79.25H68.6663V74.4857Z" fill="url(#paint0_linear_24_2500)"/>
+                        <path d="M56.1247 30.875C56.1247 39.7806 48.9053 47 39.9997 47C31.0941 47 23.8747 39.7806 23.8747 30.875C23.8747 21.9694 31.0941 14.75 39.9997 14.75C48.9053 14.75 56.1247 21.9694 56.1247 30.875Z" fill="url(#paint1_linear_24_2500)"/>
+                    </g>
+                    <rect x="0.5" y="0.5" width="79" height="79" rx="39.5" stroke="url(#paint2_linear_24_2500)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_24_2500" x1="68.6663" y1="47" x2="11.333" y2="47" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ED1F24"/>
+                            <stop offset="1" stop-color="#FD7A24"/>
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_24_2500" x1="68.6663" y1="47" x2="11.333" y2="47" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ED1F24"/>
+                            <stop offset="1" stop-color="#FD7A24"/>
+                        </linearGradient>
+                        <linearGradient id="paint2_linear_24_2500" x1="80" y1="40" x2="0" y2="40" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#ED1F24"/>
+                            <stop offset="1" stop-color="#FD7A24"/>
+                        </linearGradient>
+                        <clipPath id="clip0_24_2500">
+                            <rect width="80" height="80" rx="40" fill="white"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                <div class="ticketland__result-card__info">
+                    <span class="ticketland__result-card__info-email" id="resultEmail">Miro98@mail.ru</span>
+                    <span class="ticketland__result-card__info-date" id="resultDate">Дата розыгрыша: 11.10.2025</span>
+                </div>
+                <div class="ticketland__result-card__price">
+                    <p>
+                        Подарочная карта
+                        <span class="ticketland__result-card__price--red" id="resultAmount">100 000</span> ₽
+                    </p>
+                    <span>Отправлен на ваш E-mail</span>
+                </div>
+            </div>
+        </div>
+        <div class="ticketland__error" id="resultError">
+            Победитель с таким email не найден
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

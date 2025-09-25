@@ -1,0 +1,336 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+input[type='file'] {
+    max-width: 100%;
+}
+
+.ticketland {
+    padding: 80px 16px 40px;
+}
+
+.ticketland h2 {
+    font-family: 'MTS Extended', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    color: #07103E;
+    margin-bottom: 52px;
+}
+
+@media screen and (max-width: 768px) {
+    .ticketland h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+}
+
+.ticketland__title-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .ticketland__title-mobile {
+        display: block;
+    }
+}
+
+.ticketland__title {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .ticketland__title {
+        display: none;
+    }
+}
+
+.ticketland__search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.ticketland__search .search-container {
+    position: relative;
+    max-width: 502px;
+    width: 100%;
+}
+
+.ticketland__search .search-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 32px 12px 12px 44px;
+    gap: 8px;
+    width: 100%;
+    height: 56px;
+    background: #FFFFFF;
+    border: 1px solid rgba(188, 195, 208, 0.5);
+    border-radius: 20px;
+    font-family: 'MTS Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #07103E;
+}
+
+.ticketland__search .search-input:focus {
+    border-color: #626C77;
+}
+
+.ticketland__search .search-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 44px;
+    color: #626C77;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    font-family: 'MTS Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+}
+
+.ticketland__search .search-input:focus + .search-label,
+.ticketland__search .search-input:not(:placeholder-shown) + .search-label {
+    top: 12px;
+    left: 44px;
+    font-size: 12px;
+    background: white;
+}
+
+.ticketland__search .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+.ticketland__search .clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.ticketland__search .search-input:not(:placeholder-shown) ~ .clear-icon {
+    display: block;
+}
+
+.ticketland__search .search-input:not(:placeholder-shown) ~ .search-icon {
+    display: none;
+}
+
+.ticketland__search button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 86px;
+    height: 44px;
+    background: #FE0032;
+    border-radius: 8px;
+    font-family: 'MTS Compact', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.ticketland__search button:hover {
+    background: #FD7A24;
+}
+
+.ticketland__result {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticketland__result.show {
+    display: flex;
+}
+
+.ticketland__result-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(242, 243, 247, 0.6);
+    border-radius: 12px;
+    padding: 20px 12px 12px;
+    width: 203px;
+}
+
+.ticketland__result-card__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 4px;
+}
+
+.ticketland__result-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.ticketland__result-card__info-email {
+    font-family: 'MTS Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #07103E;
+}
+
+.ticketland__result-card__price span,
+.ticketland__result-card__info-date {
+    font-family: 'MTS Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #626C77;
+}
+
+.ticketland__result-card__price {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ticketland__result-card__price p {
+    font-family: 'MTS Text', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #07103E;
+}
+
+.ticketland__result-card__price--red {
+    font-family: 'MTS Extended', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 27px !important;
+    text-align: center !important;
+    color: #FE0032 !important;
+}
+
+.ticketland__error {
+    display: none;
+    font-family: 'MTS Extended', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    text-align: center;
+    color: #07103E;
+}
+
+.ticketland__error.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

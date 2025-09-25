@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'MTS Extended';
+    src: url('MTSExtended-Bold.eot');
+    src: local('MTS Extended Bold'), local('MTSExtended-Bold'),
+        url('MTSExtended-Bold.eot?#iefix') format('embedded-opentype'),
+        url('MTSExtended-Bold.woff2') format('woff2'),
+        url('MTSExtended-Bold.woff') format('woff'),
+        url('MTSExtended-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTS Extended';
+    src: url('MTSExtended-Medium.eot');
+    src: local('MTS Extended Medium'), local('MTSExtended-Medium'),
+        url('MTSExtended-Medium.eot?#iefix') format('embedded-opentype'),
+        url('MTSExtended-Medium.woff2') format('woff2'),
+        url('MTSExtended-Medium.woff') format('woff'),
+        url('MTSExtended-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTS Extended';
+    src: url('MTSExtended-Black.eot');
+    src: local('MTS Extended Black'), local('MTSExtended-Black'),
+        url('MTSExtended-Black.eot?#iefix') format('embedded-opentype'),
+        url('MTSExtended-Black.woff2') format('woff2'),
+        url('MTSExtended-Black.woff') format('woff'),
+        url('MTSExtended-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTS Extended';
+    src: url('MTSExtended-Regular.eot');
+    src: local('MTS Extended Regular'), local('MTSExtended-Regular'),
+        url('MTSExtended-Regular.eot?#iefix') format('embedded-opentype'),
+        url('MTSExtended-Regular.woff2') format('woff2'),
+        url('MTSExtended-Regular.woff') format('woff'),
+        url('MTSExtended-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'MTS Compact';
+    src: url('MTSCompact-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MTS Text';
+    src: local('MTS Text Regular'), local('MTS-Text-Regular'),
+    url('MTSText-Regular.woff2') format('woff2'),
+    url('MTSText-Regular.woff') format('woff'),
+    url('MTSText-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
